@@ -38,7 +38,7 @@ void Pheno4T2D(){
 	double dSGMass[nPoints] = {350, 375, 400, 425, 450, 475, 500, 600, 700, 800, 900, 1000}; //sgluon masses
 	double dSRefficiency[nPoints] = {0.003758, 0.0040968, 0.004889, 0.0058141, 0.00689055, 0.0074328, 0.00839955, 0.0100639, 0.0127462, 0.0152723, 0.0175777, 0.0173885}; //efficiencies in SR28 for nominal 0.03 luL3x3 lUR3x3
 	double dSGKfactor[nPoints] = {1.7, 1.7, 1.7, 1.7, 1.75, 1.8, 1.8, 1.8, 1.9, 2.0, 2.1, 2.2}; //K factor for NLO
-	double dSG_BR_tt[nPoints] = {0.0298, 0.2121, 0.3326, 0.4022, 0.4426, 0.4658, 0.4784, 0.4783, 0.4472, 0.4083, 0.3689, 0.3319}; //slguon branching ratios to ttbar
+	//double dSG_BR_tt[nPoints] = {0.0298, 0.2121, 0.3326, 0.4022, 0.4426, 0.4658, 0.4784, 0.4783, 0.4472, 0.4083, 0.3689, 0.3319}; //slguon branching ratios to ttbar
 	double dSGxsec2[nPoints] = {5.411, 177.18, 305.9, 308.23, 254.8, 194.9, 147.99, 39.05, 10.77, 3.09, 0.922, 0.284}; // sgluon cross section in fb
 
 	double coupling1[nPoints] = {0.0130262, 0.0187498, 0.0248832, 0.0299049. 0.0335501, 0.0359585, 0.0373754, 0.0373562, 0.0340081, 0.0304148, 0.0273303, 0.0248388}; //weights for 0.01 luL3x3 lUR3x3
@@ -51,7 +51,7 @@ void Pheno4T2D(){
 	double dLumi = 19.5; //fb^-1
 	double SM4T_SReff = 0.0078; //Search region efficiency for Standard Model 4 top
 	double SM4T_xsec = 1.3; //fb
-	double SM4T_dilepBR_SS = 0.2962*0.5; //dilepton branching ratio * same sign
+	//double SM4T_dilepBR_SS = 0.2962*0.5; //dilepton branching ratio * same sign
 
 	double SM_nEvents = SM4T_SReff*SM4T_xsec*dLumi;  //predicted number of SM4T events 
 
