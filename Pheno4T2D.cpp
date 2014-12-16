@@ -36,7 +36,13 @@ void Pheno4T2D(){
 	const int nPointscoup = 5;
 
 	double dSGMass[nPoints] = {350, 375, 400, 425, 450, 475, 500, 600, 700, 800, 900, 1000}; //sgluon masses
-	double dSRefficiency[nPoints] = {0.003758, 0.0040968, 0.004889, 0.0058141, 0.00689055, 0.0074328, 0.00839955, 0.0100639, 0.0127462, 0.0152723, 0.0175777, 0.0173885}; //efficiencies in SR28 for nominal 0.03 luL3x3 lUR3x3
+	//double dSRefficiency[nPoints] = {0.003758, 0.0040968, 0.004889, 0.0058141, 0.00689055, 0.0074328, 0.00839955, 0.0100639, 0.0127462, 0.0152723, 0.0175777, 0.0173885}; //efficiencies in SR28 for nominal 0.03 luL3x3 lUR3x3
+																																											//lepton pt>10
+	//double dSRefficiency[nPoints] = {0.00231, 0.00288, 0.00369, 0.00416, 0.00517, 0.00581, 0.00643, 0.00771, 0.0104, 0.0124, 0.0148, 0.0146}; //efficiencies in SR28 for nominal 0.03 luL3x3 lUR3x3
+																																											//lepton pt>20
+	double dSRefficiency[nPoints] = {0.002284, 0.002874, 0.003664, 0.004128, 0.005164, 0.005807, 0.00641, 0.007642, 0.01035, 0.01231, 0.01473, 0.01453}; //efficiencies in SR28 for nominal 0.03 luL3x3 lUR3x3
+																																											//lepton pt>20
+
 	double dSGKfactor[nPoints] = {1.7, 1.7, 1.7, 1.7, 1.75, 1.8, 1.8, 1.8, 1.9, 2.0, 2.1, 2.2}; //K factor for NLO
 	//double dSG_BR_tt[nPoints] = {0.0298, 0.2121, 0.3326, 0.4022, 0.4426, 0.4658, 0.4784, 0.4783, 0.4472, 0.4083, 0.3689, 0.3319}; //slguon branching ratios to ttbar
 	double dSGxsec2[nPoints] = {5.411, 177.18, 305.9, 308.23, 254.8, 194.9, 147.99, 39.05, 10.77, 3.09, 0.922, 0.284}; // sgluon cross section in fb
@@ -115,7 +121,7 @@ void Pheno4T2D(){
     h_theory->SetZTitle("events");
     h_theory->DrawClone("colz");
     double contours[2];
-    contours[0] = 5.6.;   //contour at 5.6 events
+    contours[0] = 4.68.;   //contour at 4.68 events
     contours[1] = 0.0013;
     h_theory->SetContour(1,contours);
     h_theory->DrawClone("cont1same");
